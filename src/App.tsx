@@ -12,24 +12,14 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path="/" >
-            <DayList />
-          </Route>
-          <Route path="/day/:day">
-            <Day />
-          </Route>
-          <Route path="/create_word">
-            <CreateWord />
-          </Route>
-          <Route path="/create_day">
-            <CreateDay />
-          </Route>
-          <Route>
-            <EmptyPage />
-          </Route>
+          <Route path="/" element={<DayList />} />
+          <Route path="/day/:day" element={<Day />} />
+          <Route path="/create_word" element={<CreateWord />} />
+          <Route path="/create_day" element={<CreateDay />} />
+          <Route path="/*" element={<EmptyPage />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 
